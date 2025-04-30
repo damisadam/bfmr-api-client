@@ -1,0 +1,19 @@
+{
+  "name": "sadamhussain/bfmr-api-client",
+  "description": "Laravel client for BFMR APIs",
+  "autoload": {
+    "psr-4": {
+      "SadamHussain\\BfmrApiClient\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SadamHussain\\BfmrApiClient\\BfmrApiClientServiceProvider"
+      ],
+      "aliases": {
+        "BfmrApi": "SadamHussain\\BfmrApiClient\\Facades\\BfmrApi"
+      }
+    }
+  }
+}
