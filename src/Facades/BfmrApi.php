@@ -1,6 +1,6 @@
 <?php
 
-namespace SadamHussain\BfmrApiClient\Facades;
+namespace damisadam\BfmrApiClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

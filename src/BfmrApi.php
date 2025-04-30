@@ -1,6 +1,6 @@
 <?php
 
-namespace SadamHussain\BfmrApiClient;
+namespace damisadam\BfmrApiClient;
 
 use Illuminate\Support\Facades\Http;
 
