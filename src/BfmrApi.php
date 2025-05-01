@@ -85,4 +85,33 @@ class BfmrApi
             ])
             ->json();
     }
+
+    public function getActiveRetailers($params = [])
+    {
+        return Http::withHeaders($this->headers())
+            ->get("{$this->baseUrl}/api/v2/look-ups/retailers", $params)
+            ->json();
+    }
+
+    public function submitAmazonOTP(array $otp_data)
+    {
+        return Http::withHeaders($this->headers())
+            ->post("{$this->baseUrl}/api/v2/shipments/otp/amazon", [
+                'otp_data' => $otp_data
+            ])
+            ->json();
+    }
+
+    public function getTrackingNumberStatus($params = [])
+    {
+        return Http::withHeaders($this->headers())
+            ->get("{$this->baseUrl}/api/v2/shipments/status", $params)
+            ->json();
+    }
+    public function doNotProcessShipment($params = [])
+    {
+        return Http::withHeaders($this->headers())
+            ->post("{$this->baseUrl}/api/v2/shipments/do-not-process", $params)
+            ->json();
+    }
 }
